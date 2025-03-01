@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "sharepoint-framework-teste-client-side-solution",
+    "id": "4d33b8af-82f6-41bb-9a8c-c62939bd7fae",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "sharepoint-framework-teste description"
+      },
+      "longDescription": {
+        "default": "sharepoint-framework-teste description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "sharepoint-framework-teste Feature",
+        "description": "The feature that activates elements of the sharepoint-framework-teste solution.",
+        "id": "17020161-ec97-4dc5-a432-d3703b739d82",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/sharepoint-framework-teste.sppkg"
+  }
+}

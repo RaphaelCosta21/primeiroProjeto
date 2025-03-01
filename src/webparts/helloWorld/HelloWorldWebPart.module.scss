@@ -1,0 +1,66 @@
+//full width workbench
+:global {
+  #workbenchPageContent,
+  .CanvasComponent.LCS .CanvasZone {
+    max-width: 100% !important;
+  }
+}
+.helloWorld {
+  display: flex;
+}
+/* Estilos para o pop-up e abas */
+.container {
+  padding: 10px;
+}
+
+.button {
+  background-color: #0078D4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.favoritesPopup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.tabButton {
+  background-color: #0078D4;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tabContent {
+  display: none;
+}
+
+.closeButton {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
