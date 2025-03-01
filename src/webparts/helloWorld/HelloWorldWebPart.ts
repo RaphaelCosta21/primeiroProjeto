@@ -3,7 +3,7 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
 export interface IHelloWorldWebPartProps {
 }
-
+//teste para verificar se atualiza nos dois computadores
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
   public render(): void {
     // Definindo a estrutura básica no WebPart
