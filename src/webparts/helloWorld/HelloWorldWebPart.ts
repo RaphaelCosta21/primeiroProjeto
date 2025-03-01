@@ -1,16 +1,16 @@
 import { Version } from '@microsoft/sp-core-library';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
+import styles from './HelloWorldWebPart.module.scss';
 
 export interface IHelloWorldWebPartProps {
 }
-//teste para verificar se atualiza nos dois computadores
-//teste 2
+
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
   public render(): void {
     // Definindo a estrutura básica no WebPart
     this.domElement.innerHTML = `
-    <div class="webPartContainer">
-      <h1>Bem-vindo ao WebPart!</h1>
+    <div class="${styles.webPartContainer}">
+      <h1>Testando uma Aba de Favoritos!</h1>
       <div class="container">
         <button class="button" id="openFavoritesButton">Abrir Favoritos</button>
       </div>
@@ -19,30 +19,33 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
       <div class="popup" id="favoritesPopup" style="display: none;">
         <div class="popupContent">
           <span class="closeButton" id="closePopup">&times;</span>
-          <h2>Favoritos</h2>
+          <h2>ROV</h2>
           
           <!-- Tabela com abas -->
           <div class="tabContainer">
-            <button class="tabButton" id="tab1Button">Aba 1</button>
-            <button class="tabButton" id="tab2Button">Aba 2</button>
+            <button class="tabButton" id="tab1Button">Gaiola</button>
+            <button class="tabButton" id="tab2Button">Cameras</button>
           </div>
           
           <div class="tabContent" id="tab1Content">
             <table>
               <thead>
                 <tr>
-                  <th>Item</th>
+                  <th>Partnumber</th>
                   <th>Descrição</th>
+                  <th>Sub-Grupo</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Favorito 1</td>
-                  <td>Descrição do Favorito 1</td>
+                  <td>0318290</td>
+                  <td>Pernas da Gaiola</td>
+                  <td>Millennium</td>
                 </tr>
                 <tr>
-                  <td>Favorito 2</td>
-                  <td>Descrição do Favorito 2</td>
+                  <td>123114</td>
+                  <td>Hooks da Gaiola</td>
+                  <td>Magnum</td>
                 </tr>
               </tbody>
             </table>
@@ -52,18 +55,21 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
             <table>
               <thead>
                 <tr>
-                  <th>Item</th>
+                  <th>Partnumber</th>
                   <th>Descrição</th>
+                  <th>Sub-Grupo</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Favorito A</td>
-                  <td>Descrição do Favorito A</td>
+                  <td>4443123</td>
+                  <td>Camera HD 1</td>
+                  <td>HD</td>
                 </tr>
                 <tr>
-                  <td>Favorito B</td>
-                  <td>Descrição do Favorito B</td>
+                  <td>3453453</td>
+                  <td>Camera SIT</td>
+                  <td>Black & White</td>
                 </tr>
               </tbody>
             </table>
@@ -118,6 +124,9 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
       (tabContent as HTMLElement).style.display = "block";
     }
   }
+
+
+
 
   protected async onInit(): Promise<void> {
     return super.onInit();
